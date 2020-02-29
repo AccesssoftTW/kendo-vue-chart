@@ -15,12 +15,6 @@
       :theme="'sass'"
     >
     </kendo-chart>
-    <div style="margin-top:100px">
-      <h3>常見範例</h3>
-      <router-link to="/bar-chart">Bar Chart（長條圖）</router-link>
-      <br />
-      <router-link to="/line-chart">Line Chart（折線圖）</router-link>
-    </div>
   </div>
 </template>
 

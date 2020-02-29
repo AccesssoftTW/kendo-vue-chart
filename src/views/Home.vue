@@ -1,38 +1,28 @@
 <template>
-  <div id="vueapp" class="vue-app">
-    <kendo-chart
-      :style="style"
-      :title-text="'Kendo Chart Example'"
-      :series="series"
-      :category-axis-categories="categories"
-      :theme="'sass'"
-    >
-    </kendo-chart>
-    <div style="margin-top:100px">
-      <h3>常見範例</h3>
-      <router-link to="/bar-chart">Bar Chart（長條圖）</router-link>
-      <br />
-      <router-link to="/line-chart">Line Chart（折線圖）</router-link>
-      <br />
-      <router-link to="/pie-chart">Pie Chart（圓餅圖）</router-link>
-    </div>
+  <div id="vueapp">
+    <AreaChart></AreaChart>
+    <BarChart></BarChart>
+    <LineChart></LineChart>
+    <PieChart></PieChart>
   </div>
 </template>
 
 <script>
+import AreaChart from "../components/AreaChart";
+import BarChart from "../components/BarChart";
+import LineChart from "../components/LineChart";
+import PieChart from "../components/PieChart";
+
 export default {
   name: "vueapp",
   data: function() {
-    return {
-      series: [
-        {
-          name: "Example Series",
-          data: [200, 450, 300, 125]
-        }
-      ],
-      categories: [2000, 2001, 2002, 2003],
-      style: "width: 1200px; margin: auto"
-    };
+    return {};
+  },
+  components: {
+    AreaChart,
+    BarChart,
+    LineChart,
+    PieChart
   }
 };
 </script>

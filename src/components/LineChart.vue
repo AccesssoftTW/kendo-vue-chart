@@ -1,8 +1,11 @@
 <template>
-  <div id="vueapp" class="vue-app">
+  <div
+    id="vueapp"
+    class="vue-app"
+    style="width: 1200px; margin: auto; padding-bottom: 50px"
+  >
     <kendo-chart
       ref="chart"
-      :style="style"
       :title-text="'Gross domestic product growth \n /GDP annual %/'"
       :legend-position="'bottom'"
       :chart-area-background="''"
@@ -34,12 +37,6 @@
         :data="haitiData"
       ></kendo-chart-series-item>
     </kendo-chart>
-    <div style="margin-top:100px">
-      <h3>常見範例</h3>
-      <router-link to="/bar-chart">Bar Chart（長條圖）</router-link>
-      <br />
-      <router-link to="/pie-chart">Pie Chart（圓餅圖）</router-link>
-    </div>
   </div>
 </template>
 
@@ -84,8 +81,7 @@ export default {
         -5.416,
         5.59
       ],
-      categories: [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011],
-      style: "width: 1200px; margin: auto"
+      categories: [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011]
     };
   }
 };

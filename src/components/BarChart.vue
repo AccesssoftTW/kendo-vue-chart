@@ -1,7 +1,10 @@
 <template>
-  <div id="vueapp" class="vue-app">
+  <div
+    id="vueapp"
+    class="vue-app"
+    style="width: 1200px; margin: auto; padding-bottom: 50px"
+  >
     <kendo-chart
-      :style="style"
       :title-text="'Site Visitors Stats \n /thousands/'"
       :legend-visible="false"
       :series-defaults-type="'bar'"
@@ -12,12 +15,6 @@
       :theme="'sass'"
     >
     </kendo-chart>
-    <div style="margin-top:100px">
-      <h3>常見範例</h3>
-      <router-link to="/line-chart">Line Chart（折線圖）</router-link>
-      <br />
-      <router-link to="/pie-chart">Pie Chart（圓餅圖）</router-link>
-    </div>
   </div>
 </template>
 
@@ -58,8 +55,7 @@ export default {
       tooltip: {
         visible: true,
         template: "#= series.name #: #= value #"
-      },
-      style: "width: 1200px; margin: auto"
+      }
     };
   }
 };
